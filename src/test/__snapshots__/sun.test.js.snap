@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test renders correctly 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <a
+      className="container"
+      href="www.softwaretestinghelp.com"
+    >
+      www.softwaretestinghelp.com
+    </a>
+    <div
+      className="col-md-12"
+    >
+      <h1>
+        Test Page
+      </h1>
+      <p>
+        This is a test page 
+        #
+      </p>
+    </div>
+  </div>
+</div>
+`;

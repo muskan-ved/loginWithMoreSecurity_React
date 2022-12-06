@@ -2,8 +2,6 @@ import { useState } from 'react';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
-// mocks_
-import account from '../../../_mock/account';
 import { RECEPTION_LOGOUT } from 'src/actions/auth';
 import { useSelector } from 'react-redux';
 
@@ -69,7 +67,7 @@ export default function AccountPopover() {
           }),
         }}
       >
-        <Avatar src={account.photoURL} alt="photoURL" />
+        <Avatar src={"account"} alt="photoURL" />
       </IconButton>
 
       <Popover

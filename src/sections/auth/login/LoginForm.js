@@ -49,12 +49,13 @@ export default function LoginForm() {
       payload: fields,
       header: auth_token
     }
+
     if (isValid) {
       setLoading(true);
       await dispatch(
         RECEPTION_LOGIN(requestData, (res) => {
-          if(res?.response?.data?.message){
-            toast.error(res?.response?.data?.message)
+          if(res?.response?.status === 401){
+            toast.error('Token is required')
           }else if(res.status === 200){
             toast.success("Receiption Logged In")
             navigate("/dashboard", { replace: true });
@@ -135,3 +136,4 @@ export default function LoginForm() {
     </>
   );
 }
+

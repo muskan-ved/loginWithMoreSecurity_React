@@ -54,7 +54,7 @@ const TABLE_HEAD = [
 
 // ----------------------------------------------------------------------
 
-export default function UserPage() {
+export default function UserPage(props) {
   const [open, setOpen] = React.useState(false);
   const [openAddModal, setOpenAddModal] = React.useState(false);
   const [openDeleteModal, setOpenDeleteModal] = React.useState(false);
@@ -86,7 +86,7 @@ export default function UserPage() {
           RECEPTION_LOGOUT();
         } else if (res?.response?.data?.message) {
           toast.error(res?.response?.data?.message);
-        }else{
+        }else if(res.status === 200) {
 		}
       })
     );
@@ -241,7 +241,11 @@ export default function UserPage() {
             Add New
           </Button>
         </Stack>
-
+        <a
+               className={'container'}
+               href={props.page || '#'}>
+               {props.page}
+           </a>
         <Card>
           <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} handleAllDelete={handleAllDelete}/>
 

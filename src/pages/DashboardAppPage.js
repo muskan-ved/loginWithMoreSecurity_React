@@ -62,7 +62,7 @@ const TABLE_HEAD = [
   { id: "" },
 ];
 
-export default function DashboardAppPage() {
+export default function DashboardAppPage(props) {
 
   const [open, setOpen] = useState(false);
   const [page, setPage] = useState(0);
@@ -191,6 +191,11 @@ export default function DashboardAppPage() {
       <Helmet>
         <title> Dashboard | Booking Direction </title>
       </Helmet>
+      <a
+               className={'contanier'}
+               href={props.page || '#'}>
+               {props.page}
+           </a>
 
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>

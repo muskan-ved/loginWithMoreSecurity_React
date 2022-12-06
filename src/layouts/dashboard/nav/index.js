@@ -11,8 +11,6 @@ import {
   Avatar,
   Stack,
 } from "@mui/material";
-// mock
-import account from "../../../_mock/account";
 // hooks
 import useResponsive from "../../../hooks/useResponsive";
 // components
@@ -79,7 +77,7 @@ export default function Nav({ openNav, onCloseNav }) {
       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none">
           <StyledAccount>
-            <Avatar src={account.photoURL} alt="photoURL" />
+            <Avatar src={"accoun"} alt="photoURL" />
 
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: "text.primary" }}>
@@ -87,7 +85,7 @@ export default function Nav({ openNav, onCloseNav }) {
               </Typography>
 
               <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                {account.role}
+                {"admin"}
               </Typography>
             </Box>
           </StyledAccount>
