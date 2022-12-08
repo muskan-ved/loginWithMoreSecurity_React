@@ -7,6 +7,7 @@ import ScrollToTop from './components/scroll-to-top';
 import { useDispatch } from 'react-redux'
 import { AUTHORIZATION_TOKEN } from './actions/auth';
 import { useEffect } from 'react';
+
 // ----------------------------------------------------------------------
 
 export default function App() {
